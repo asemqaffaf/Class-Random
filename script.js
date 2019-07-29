@@ -17,17 +17,8 @@ var arr = [
   "Hadeel fleifel  ",
   "Elias Nada  ",
   "Ahmad Taha ",
-   "Amal Aldajah ",
-
-
+  "Amal Aldajah "
 ];
-
-//  "Ahmad ghzawi "
-//  "Asem Qaffaf ",
-//   "Mohammad.y.albittar ",
-//    "Mohammad Talib ",
-//   "Ahmad Azzam",
-//  "Yaser ",
 
 var arrayOfSixElements = [
   "Yaser ",
@@ -35,15 +26,24 @@ var arrayOfSixElements = [
   "Mohammad Talib ",
   "Mohammad.y.albittar ",
   "Asem Qaffaf ",
-  "Ahmad ghzawi ",
-
+  "Ahmad ghzawi "
+];
+var numberInWord = [
+  "ONE:",
+  "TWO:",
+  "THREE:",
+  "FOUR:",
+  "FIVE:",
+  "SIX:",
+  "SEVEN:",
+  "EIGHT:"
 ];
 var randomArr = [];
 var randomArr2 = [];
 var arrayOfRandom = [""];
 function shuffle() {
   for (
- var j, x, i = arr.length;
+    var j, x, i = arr.length;
     i;
     j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x
   );
@@ -63,65 +63,88 @@ function shuffle2() {
 shuffle();
 shuffle2();
 var counter = 0;
-for (let i = 0; i < randomArr.length -3; i++) {
-  // if (counter == 0) {
-  //   document.write(
-  //     "<pre >" +
-  //       "Group  (" +
-  //       (counter + 1) +
-  //       ")  " +
-  //       arrayOfSixElements[0] +
-  //       "</pre>"
-  //   );
-  // }
-  if(i == 0 ){
+for (let i = 0; i < randomArr.length - 3; i++) {
+  if (i == 0) {
     document.write(
-      "<pre >" + "Group  (" + (counter) + ")  " + randomArr[i] + "</pre>"
+      "<pre >" +
+        "Group  " +
+        numberInWord[counter] +
+        "  " +
+        randomArr[i] +
+        "</pre>"
     );
-    document.write(
-      "<pre>" + "Group  (" + (counter) + ")  " + randomArr[i + 1] + "</pre>"
-    );
-    document.write(
-      "<pre>" + "Group  (" + (counter) + ")  " + randomArr[i + 2] + "</pre>"
-    );
-    document.write(
-      "<pre>" + "Group  (" + (counter) + ")  " + randomArr[randomArr.length-1] + "</pre>"
-    );
-  
     document.write(
       "<pre>" +
-        "Group  (" +
-        counter +
-        ")  " +
+        "Group  " +
+        numberInWord[counter] +
+        "  " +
+        randomArr[i + 1] +
+        "</pre>"
+    );
+    document.write(
+      "<pre>" +
+        "Group  " +
+        numberInWord[counter] +
+        "  " +
+        randomArr[i + 2] +
+        "</pre>"
+    );
+    document.write(
+      "<pre>" +
+        "Group  " +
+        numberInWord[counter] +
+        "  " +
+        randomArr[randomArr.length - 1] +
+        "</pre>"
+    );
+
+    document.write(
+      "<pre>" +
+        "Group  " +
+        numberInWord[counter] +
+        "  " +
         arrayOfSixElements[0] +
         "<br><br>" +
         "</pre>"
     );
-    
   }
-  
-  if(i >= 3){ 
+
+  if (i >= 3) {
     if (i % 3 == 0) {
-      
-    document.write(
-      "<pre >" + "Group  (" + (counter + 1) + ")  " + randomArr[i] + "</pre>"
-    );
-    document.write(
-      "<pre>" + "Group  (" + (counter + 1) + ")  " + randomArr[i + 1] + "</pre>"
-    );
-    document.write(
-      "<pre>" + "Group  (" + (counter + 1) + ")  " + randomArr[i + 2] + "</pre>"
-    );
-    counter++;
-    document.write(
-      "<pre>" +
-        "Group  (" +
-        counter +
-        ")  " +
-        arrayOfSixElements[counter] +
-        "<br><br>" +
-        "</pre>"
-    );
+      document.write(
+        "<pre >" +
+          "Group  " +
+          numberInWord[counter + 1] +
+          "  " +
+          randomArr[i] +
+          "</pre>"
+      );
+      document.write(
+        "<pre>" +
+          "Group  " +
+          numberInWord[counter + 1] +
+          "  " +
+          randomArr[i + 1] +
+          "</pre>"
+      );
+      document.write(
+        "<pre>" +
+          "Group  " +
+          numberInWord[counter + 1] +
+          "  " +
+          randomArr[i + 2] +
+          "</pre>"
+      );
+      counter++;
+      document.write(
+        "<pre>" +
+          "Group  " +
+          numberInWord[counter] +
+          "  " +
+          arrayOfSixElements[counter] +
+          "<br><br>" +
+          "</pre>"
+      );
+    }
   }
-}
 }
